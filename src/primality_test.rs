@@ -32,3 +32,17 @@ pub fn sieve_of_eratosthenes(max_value: u64) -> Vec<u64> {
     });
     result
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn value_under_1_should_return_empty_vec() {
+        assert_eq!(0, sieve_of_eratosthenes(1).len());
+    }
+
+    #[test]
+    fn value_over_2_should_return_prime_numbers() {
+        assert_eq!([2, 3, 5, 7, 11, 13, 17, 19, 23].to_vec(), sieve_of_eratosthenes(23));
+    }
+}
