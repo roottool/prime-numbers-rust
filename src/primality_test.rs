@@ -43,6 +43,9 @@ mod tests {
 
     #[test]
     fn value_over_2_should_return_prime_numbers() {
-        assert_eq!([2, 3, 5, 7, 11, 13, 17, 19, 23].to_vec(), sieve_of_eratosthenes(23));
+        assert_eq!(
+            [2, 3, 5, 7, 11, 13, 17, 19, 23].to_vec(),
+            sieve_of_eratosthenes(23)
+        );
     }
 }
